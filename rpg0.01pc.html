@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Jeux RPG</title>
+</head>
+
+<body>
+  <H1>Jeux Incroyable.</H1>
+    <script type="text/javascript">
+
+var h = "15 heure"
+var $ = "500$"
+var banque$ = "10 000"
+
+//Choix classe Guerrier ou Assassin
+
+
+var classe = prompt  ("(1) Guerrier (2) Assassin")
+
+
+//Guerrier-Choisir sexe
+if (classe == 1){ classe = "Guerrier"
+var sexe = prompt("(1) Homme (2) Femme (3) Robot")}
+
+//Guerrier-Homme
+if (sexe == 1){var hp = 150
+alert (classe + " Homme"+ " [150 Pv]")}
+//Guerrier-Femme
+if (sexe == 2){hp = 0
+alert (classe + " Femme" + " [150 Pv]")}
+//Guerrier-Robot
+if (sexe == 3){hp = 180
+alert (classe + " Robot" + " [180 Pv]")}
+
+
+//Assassin-Choisir sexe
+if (classe == 2){classe = "Assassin"
+var sexe2 = prompt ("(1) Homme (2) Femme (3) Robot")}
+
+//Assassin-Homme
+if (sexe2 == 1){hp = 100
+alert ("Homme " + classe + " [100 Pv]")}
+//Assassin-Femme
+if (sexe2 == 2){hp =100
+alert ("Femme " + classe + " [100 Pv]")}
+//Assassin-Robot
+if (sexe2 == 3){hp = 130
+alert ("Robot " + classe + " [130 Pv]")}
+
+if (sexe == 1){alert ("Tu es donc un Homme Guerrier avec " + hp + " points de vie")}
+if (sexe == 2){alert ("Tu es donc une Femme Guerrier avec " + hp + " points de vie" )}
+if (sexe == 3){alert ("Tu es donc un Guerrier Robot avec " + hp + " points de vie" )}
+if (sexe2 == 1){alert ("Tu es donc un Homme Assassin avec " + hp + " points de vie"  )}
+if (sexe2 == 2){alert ("Tu es donc une Femme Assassin avec " + hp + " points de vie"  )}
+if (sexe2 == 3){alert ("Tu es donc un Robot Assassin avec " + hp + " points de vie" )}
+
+alert ("Tu te promène dans les bois quand tout à coup, une figure humaine te saute dans le dos avec une dague mais toutefois en rattant son attaque. Tu écope donc d'une bléssure moins sérieuse ")
+hp = hp-30
+var un = prompt("Tu as maintenant "+ hp + " points de vie et une plaie sur le bras gauche.Que fait tu (1) Attaqué l'inconnu (2) Fuire.")
+
+//Quoi faire aprÃ¨s l'attaque.
+if (un == 1){
+var deux = prompt("(1) Attaqué La tête (2) Attaquer le corp.")}
+if (un == 2){
+var fuire = prompt("tu fuit avec succès mais tu ne sait pas si l'inconnu va continuer à te suivre. Tu continue de courir quelque minute jusqu'a ce que tu semble loin du danger. Tu prend une pause pour reprendre ton énergie et décidé de ce que tu va faire. (1)Rentrer au village (2) Se soigner.")}
+
+//Rentrer au village après avoir fuit
+if (fuire == 1){
+var cinq = prompt ("Tu retourne dans le village de Arbington, que fait tu, (1) Rentrer à la maison (2) Aller au marché (3) Commettre un crime.")}
+if (fuire == 2){
+var six  = prompt ("Tu te posa près d'une rivière pour te soigner, quelle est la première étape (1) Nettoyer la plaie (2) Désinfecter à l'aide d'un antiseptiques (3) mettre un bandage")}
+
+//AttaquÃ© la tÃªte ou le corp
+if (deux == 1){
+alert ("Tu lui donne un coup de poing mais il semblait l'avoir deja prvu et il l'esquiva facilement pour finalement te poignarder avec son couteau dans le ventre. Tu t'écroula à terre pour agoniser quelque minute, tu senti une main te fouiller les poches pour y prendre ton argent. Tu moura au bout de ton sang. ")}
+if (deux == 2){hp = hp - 30
+var trois = prompt ("Tu lui donne un coup de poing semi-fort ce qui le mit à terre, il sorti sa gatling magique et t'enleva 30 points de vie. Tu dévia ses tire des gatling pour l'achever avec ta dague. Tu as maintenant " + hp + "Pv. Tu fait quoi (1) Looter le cadavre de ton assaillants (2) Retourner dans ton village ou (3) se soigner.")}
+
+//Après le combat
+if (trois == 1){
+var quatre = prompt ("Tu y trouve 50$, une boite de médicament, une dague de chasseur de primes et une lettre. que fait tu. (1) Lire la lettre et prendre tout (2) Rentrer au village en prenant tout le loot.")}
+if (trois == 2){
+var cinq = prompt ("Tu retourne dans le village de Arbington, que fait tu, (1)Rentrer à la maison (2) Aller au marché (3) Commettre un crime.")}
+if (trois == 3){
+var six = prompt ("Tu te posa près d'une rivière pour te soigner, quelle est la première étape (1) Nettoyer la plaie (2) Désinfecter à l'aide d'un antiseptiques (3) mettre un bandage")}
+
+//Fouiller l'assaillant
+if (quatre == 1){quatre = true
+alert ("La lettre serai apparamment un contrat de chasseur de prime, l'homme que tu venait de tuer était un chasseur de prime du nom de Jango Fett et il se serai fait engager par le grand Jahba Le Hutt de la petite ville minière de Fallholt")}
+if (quatre == 2){quatre = false
+var cinq = prompt ("Tu retourne dans le village de Arbington, que fait tu, (1) Rentrer à la maison (2) Allé au marché (3) Commettre un crime.")}
+
+//Soigner la blessure 
+if (six == 1){
+var soin = prompt ("Tu nettoya la plaie en l'essuyant avec un débarbouillettes en utilisant l'eau de la rivière sur ton bras. Maintenant qu'elle est la deuxième étape (1) Appliquer un bandage (2) Utilisé ton whisky pour remplacer l'antiseptiques.")}
+if (six == 2){
+var soin2 = prompt ("Tu oublie de nettoyer ton bras ce qui peut dangereux mais, dans ton cas ça s'est bien passer. Maintenant que fait tu pour la deuxième étape ? (1) Mettre un bandage (2) Mettre de l'eau sur un bout de tissu et nettoyer la plaie.")}
+if (six == 3){
+alert ("Malheureusement tu oublia de nettoyé ta plaie mais surtout tu oublia une des étapes les plus importante, sans l'alcool des bactéries et des champignons commencèrent à ronger l'intérieur de ton bras, et sans soins supplémentaires tu mourras.")}
+
+if (soin == 1){
+alert ("Malheureusement tu oublia une des étapes les plus importante, sans l'alcool des bactéries et des champignons commencèrent ronger l'intérieur de ton bras, et sans soins supplémentaires tu mourras.")}
+if (soin == 2){hp = hp + 100
+alert ("Tu ouvre ton sac et en retire du whisky. Avec un bout de tissu tu réussi à désinfecter la plaie. Tu fini finalement par mettre le bandage qui va cicatriser la plaie pour les prochains jours.")}
+
+if (soin2 == 1){hp = hp + 100
+alert ("Tu met un bandage pou cicatriser la blessure.")}
+if (soin2 == 2){hp = hp + 100
+alert ("Tu nettoye ta blessure avec un bout de tissu. Tu fini finalement par mettre le bandage qui va cicatriser la plaie pour les prochains jours.")}
+//Dans le village
+
+if (cinq == 1){
+var maison = prompt ("Tu rentre à la maison, ton chat miaule pour de la nourriture, il est 19h. Que fait tu ? (1) Se coucher (2) Nourrir ton chat et ensuite mangé.")}
+if (cinq == 2){
+var commerce = prompt ("Tu te rend à la rue principale, là ou se trouve tous ! Des armes, de l'armure, de la nourriture de haute et de basse qualité, des tavernes, des hôtels de luxe, des banque et des écurie. On y retrouve aussi l'avenue des boutique ayant des magasin spécialisé dans certain items. Fait ton choix, où veut tu aller en premier. (1)Le Forgeron (2) Épicerie Général (3) Taverne (4) Hôtel (5) Banque (6) Écurie (7) Arène (8) Avenue des boutiques.")}
+if (cinq == 3){
+alert ("")}
+//Dans le grand marché
+if (commerce == 1){
+prompt ("Tu rentra chez Artisan Forgeron ou un homme du nom de Skarl'hak vou accueilla. Que voulez vous acheté (1) Armures (2) Armes.")}
+if (commerce == 2){
+prompt ("Tu rentra dans le grand marché de nourritures de 3 étages. Dans quelle section veut tu aller (1) Viande (2) Fruit et légume (3) Repas déja fait.")}
+if (commerce == 3){
+prompt ("Tu rentre dans la taverne. Tu fait quoi ? (1) Recruter un mercenaire (2) boire un verre.")}
+if (commerce == 4){
+alert ("Tu rentre dans l'hôtel ou on t'accueilli. Tu prit une chambre, tu veut mettre ton réveil à quelle heure (1) Midi (2) Minuit.")}
+if (commerce == 5){
+alert ("")}
+if (commerce == 6){
+alert ("")}
+if (commerce == 7){
+alert ("")}
+if (commerce == 8){
+alert ("")}
+
+//Dans la maison
+
+if (maison == 1){
+var secoucher = prompt ("Tu veut te réveiller à quelle heure (1) 10h du matin (2) minuit")}
+//À quelle heure se réveiller
+if (secoucher == 1){h = " 10h"
+alert ("Tu te réveille et il est maintenant 10h du matin")}
+if (secoucher == 2){h = " 24h"
+alert ("Tu te réveille à minuit.")}
+//Quoi mangé
+if (maison == 2){
+var eat = prompt  ("Tu dépose de la nourriture dans le bol de ton chat, tu lui rempli ensuite son bol d'eau. Tu commence avoir faim, que-est ce que tu veut mangé ? (1)Des pâtes (2) Du poulet.")}
+if (eat == 1){
+alert ("Tu fait bouillir des pâtes, tu rajoute un peu de sauce, du parmesan et un peu d'amour. ")}
+if (eat == 2){
+alert ("Tu ne sait pas comment cuir du poulet, alors tu commande du st-hubert. Le poulet fut  délicieux.")}
+
+
+//L'aventure continue
+if (quatre == true){
+alert ("Tu l'a fouillé")}
+if (quatre != true){
+alert ("Tu continue ton aventure de super aventurier.")}
+
+
+
+
+
+
+if (hp <= 0){alert ("ATENTION! Ta santé est à zéro tu es donc mort.")}
+//flagade
+    </script>
+  </body>
+</html>
